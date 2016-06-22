@@ -8,7 +8,7 @@
 		<lang name="default">Chiffa</lang>
 	</author>
 	<homepage>http://goweb.pro/lslugin-stream</homepage>
-	<version>1.0-alfa</version>
+	<version>1.0a1</version>
 	<settings>{admin}/gowebpro</settings>
 	<requires>
 		<livestreet>1.0</livestreet>

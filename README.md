@@ -4,14 +4,18 @@ LSP GoStream
 Plugin for [LiveStreet CMS](http://livestreetcms.com/ "LiveStreet CMS")
 -----------------------------------------------------------------------
 
-ATTENTION
----------
-**To use this plugin requires Livestreet CMS version 1.0 or later.**
+Attention
+To use this plugin requires **Livestreet CMS version 1.0 or later**.
 
 
 About project
 -------------
 Плагин заменяет стандартный блок "Прямой эфир" на блок с выводом активности.
+
+Changelog:
+----------
+**1.0a1:**
+- Добавлены всплывающие подсказки
 
 
 License

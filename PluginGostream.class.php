@@ -26,7 +26,8 @@ class PluginGostream extends Plugin
 
     public function Init()
     {
-        $this->Viewer_AppendStyle(Plugin::GetTemplatePath(__CLASS__) . 'css/style.css');
+        $this->Viewer_AppendScript(Plugin::GetTemplatePath(__CLASS__) . 'js/main.js');
+        $this->Viewer_AppendStyle(Plugin::GetTemplatePath(__CLASS__) . 'css/main.css');
     }
 
 }

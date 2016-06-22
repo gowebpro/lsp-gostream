@@ -5,7 +5,7 @@
 	</header>
 
 	<div class="block-content">
-		<div class="js-block-stream-content">
+		<div class="js-block-gostream-content">
 			{$aStreamAll}
 		</div>
 	</div>
