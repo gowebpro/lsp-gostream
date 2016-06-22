@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+	<name>
+		<lang name="default">Stream block</lang>
+		<lang name="russian">Прямой эфир</lang>
+	</name>
+	<author>
+		<lang name="default">Chiffa</lang>
+	</author>
+	<homepage>http://goweb.pro/lslugin-stream</homepage>
+	<version>1.0-alfa</version>
+	<settings>{admin}/gowebpro</settings>
+	<requires>
+		<livestreet>1.0</livestreet>
+		<plugins>
+		</plugins>
+	</requires>
+	<description>
+		<lang name="default">Stream block</lang>
+		<lang name="russian">Лента активности в прямом эфире</lang>
+	</description>
+</plugin>
