@@ -1,18 +1,16 @@
-.block.block-type-gostream .stream-list li.stream-header-date {
-	margin-top: 20px;
-	margin-bottom: 10px;
+.block.block-type-gostream .block-update {
+
 }
 
 .block.block-type-gostream .stream-list li.stream-item {
 	min-height: auto;
-	padding-bottom: 10px;
-	padding-left: 0;
-	margin-bottom: 10px;
+	padding: 0;
+	margin-bottom: 15px;
 	border: 0;
 	line-height: 1.4;
 }
 .block.block-type-gostream .stream-list li.stream-item p {
-	margin-bottom: 2px;
+	margin-bottom: 3px;
 	font-size: 11px;
 }
 .block.block-type-gostream .stream-list li.stream-item .author {

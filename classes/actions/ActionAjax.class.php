@@ -2,7 +2,7 @@
 /*-------------------------------------------------------
 *
 *   Project name: LSP-GoStream
-*   Official site: http://goweb.pro
+*   Official site: goweb.pro
 *   Contact e-mail: gowebpro@ya.ru
 *
 *   GNU General Public License, version 2:
@@ -12,17 +12,27 @@
 */
 
 
-class PluginGostream_BlockGoStream extends Block
+class PluginGostream_ActionAjax extends PluginGostream_Inherit_ActionAjax
 {
 
-    public function Exec()
+    protected function RegisterEvent()
+    {
+        parent::RegisterEvent();
+        $this->AddEventPreg('/^gostream$/i', '/^all$/', 'EventGostreamAll');
+    }
+
+
+    protected function EventGostreamAll()
     {
         $iLimit = Config::Get('plugin.gostream.block_count');
         if ($aEvents = $this->Stream_ReadAll($iLimit)) {
             $oViewerLocal = $this->Viewer_GetLocalViewer();
             $oViewerLocal->Assign('aStreamEvents', $aEvents);
             $sHtml = $oViewerLocal->Fetch(Plugin::GetTemplatePath(__CLASS__) . 'blocks/block.goStream_all.tpl');
-            $this->Viewer_Assign('aStreamAll', $sHtml);
+            $this->Viewer_AssignAjax('sText', $sHtml);
+        } else {
+            $this->Message_AddErrorSingle($this->Lang_Get('stream_no_events'), $this->Lang_Get('attention'));
+            return false;
         }
     }
 }

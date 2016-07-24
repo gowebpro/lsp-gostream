@@ -15,4 +15,10 @@ jQuery(document).ready(function($){
 		});
 	}
 
+	ls.blocks.init('gostream');
+
 });
+
+ls.blocks.options.type.gostream_all = {
+	url: aRouter['ajax'] + 'gostream/all/'
+};

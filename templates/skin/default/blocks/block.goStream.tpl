@@ -1,7 +1,14 @@
 <section class="block block-type-gostream">
-	<header class="block-header">
-		<h3><a href="{router page='stream'}" title="{$aLang.block_stream_comments_all}">{$aLang.block_stream}</a></h3>
+
+	<header class="block-header sep">
+		<h3>
+			<a href="{router page='stream'}" title="{$aLang.plugin.gostream.block_events_all}">{$aLang.plugin.gostream.block_title}</a>
+		</h3>
 		<div class="block-update js-block-gostream-update"></div>
+
+		<ul class="nav nav-pills js-block-gostream-nav">
+			<li class="active js-block-gostream-item" data-type="all"><a href="#">{$aLang.plugin.gostream.block_title_all}</a></li>
+		</ul>
 	</header>
 
 	<div class="block-content">
@@ -9,4 +16,5 @@
 			{$aStreamAll}
 		</div>
 	</div>
+
 </section>

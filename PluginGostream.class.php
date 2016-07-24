@@ -19,6 +19,13 @@ if (!class_exists('Plugin')) {
 class PluginGostream extends Plugin
 {
 
+    protected $aInherits = array(
+        'action' => array(
+            'ActionAjax'
+        )
+    );
+
+
     public function Activate()
     {
         return true;
