@@ -1,7 +1,7 @@
 <?php
 /*-------------------------------------------------------
 *
-*   Project name: LSP-Stream
+*   Project name: LSP-GoStream
 *   Official site: goweb.pro
 *   Contact e-mail: gowebpro@ya.ru
 *
@@ -12,5 +12,6 @@
 */
 
 $config = array();
+$config['block_count'] = 10;		// сколько записей выводить в блоке "Прямой эфир"
 
 return $config;

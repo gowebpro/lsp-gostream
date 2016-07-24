@@ -1,6 +1,6 @@
 {if count($aStreamEvents)}
 	<ul class="stream-list" id="stream-list">
-		{include file='actions/ActionStream/events.tpl'}
+		{include file = "`$aTemplatePathPlugin['gostream']`events.tpl"}
 	</ul>
 
 	<footer>

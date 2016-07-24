@@ -1,7 +1,7 @@
 <?php
 /*-------------------------------------------------------
 *
-*   Project name: LSP-Stream
+*   Project name: LSP-GoStream
 *   Official site: goweb.pro
 *   Contact e-mail: gowebpro@ya.ru
 *
