@@ -18,4 +18,6 @@ return array(
     'block_title_all' => 'Все',
     'block_title_my' => 'Я слежу',
 
+    'no_events' => 'Событий нет',
+
 );

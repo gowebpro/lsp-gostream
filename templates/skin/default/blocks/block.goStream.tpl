@@ -8,6 +8,7 @@
 
 		<ul class="nav nav-pills js-block-gostream-nav">
 			<li class="active js-block-gostream-item" data-type="all"><a href="#">{$aLang.plugin.gostream.block_title_all}</a></li>
+			<li class="js-block-gostream-item" data-type="my"><a href="#">{$aLang.plugin.gostream.block_title_my}</a></li>
 		</ul>
 	</header>
 

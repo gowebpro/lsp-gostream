@@ -22,3 +22,6 @@ jQuery(document).ready(function($){
 ls.blocks.options.type.gostream_all = {
 	url: aRouter['ajax'] + 'gostream/all/'
 };
+ls.blocks.options.type.gostream_my = {
+	url: aRouter['ajax'] + 'gostream/my/'
+};
