@@ -9,6 +9,15 @@
 	border: 0;
 	line-height: 1.4;
 }
+.block.block-type-gostream .stream-list li.stream-item > section {
+	display: table-cell;
+	vertical-align: middle;
+}
+.block.block-type-gostream .stream-list li.stream-item > section + section {
+	padding-left: 10px;
+	width: 1000px;
+}
+
 .block.block-type-gostream .stream-list li.stream-item p {
 	margin-bottom: 3px;
 	font-size: 11px;
