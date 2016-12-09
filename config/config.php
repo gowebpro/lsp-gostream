@@ -12,7 +12,7 @@
 */
 
 $config = array();
-$config['block_count'] = 10;		// сколько записей выводить в блоке "Прямой эфир"
-$config['block_avatar'] = false;	// показывать в блоке аватары
+$config['block_count'] = 10;        // сколько записей выводить в блоке "Прямой эфир"
+$config['block_avatar'] = false;    // показывать в блоке аватары
 
 return $config;
