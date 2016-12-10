@@ -30,7 +30,7 @@ class PluginGostream_ActionAjax extends PluginGostream_Inherit_ActionAjax
         if ($aEvents = $this->Stream_ReadAll($iLimit)) {
             $oViewerLocal = $this->Viewer_GetLocalViewer();
             $oViewerLocal->Assign('aStreamEvents', $aEvents);
-            $sHtml = $oViewerLocal->Fetch(Plugin::GetTemplatePath(__CLASS__) . 'blocks/block.goStream_all.tpl');
+            $sHtml = $oViewerLocal->Fetch(PluginGostream::GetFrontendPath() . 'block.goStream_all.tpl');
             $this->Viewer_AssignAjax('sText', $sHtml);
         } else {
             $this->Message_AddErrorSingle($this->Lang_Get('plugin.gostream.no_events'), $this->Lang_Get('attention'));
@@ -44,7 +44,7 @@ class PluginGostream_ActionAjax extends PluginGostream_Inherit_ActionAjax
         if ($aEvents = $this->Stream_Read($iLimit)) {
             $oViewerLocal = $this->Viewer_GetLocalViewer();
             $oViewerLocal->Assign('aStreamEvents', $aEvents);
-            $sHtml = $oViewerLocal->Fetch(Plugin::GetTemplatePath(__CLASS__) . 'blocks/block.goStream_my.tpl');
+            $sHtml = $oViewerLocal->Fetch(PluginGostream::GetFrontendPath() . 'block.goStream_my.tpl');
             $this->Viewer_AssignAjax('sText', $sHtml);
         } else {
             $this->Message_AddErrorSingle($this->Lang_Get('plugin.gostream.no_events'), $this->Lang_Get('attention'));

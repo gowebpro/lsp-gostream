@@ -22,7 +22,7 @@ class PluginGostream_BlockGoStream extends Block
         if ($aEvents = $this->Stream_ReadAll($iLimit)) {
             $oViewerLocal = $this->Viewer_GetLocalViewer();
             $oViewerLocal->Assign('aStreamEvents', $aEvents);
-            $sHtml = $oViewerLocal->Fetch(Plugin::GetTemplatePath(__CLASS__) . 'blocks/block.goStream_all.tpl');
+            $sHtml = $oViewerLocal->Fetch(PluginGostream::GetFrontendPath() . 'block.goStream_all.tpl');
             $this->Viewer_Assign('aStreamAll', $sHtml);
         }
     }
