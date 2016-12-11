@@ -5,7 +5,6 @@
 .block.block-type-gostream .stream-list li.stream-item {
     min-height: auto;
     padding: 0;
-    margin-bottom: 15px;
     border: 0;
     line-height: 1.4;
 }
@@ -22,16 +21,10 @@
 
 .block.block-type-gostream .stream-list li.stream-item p {
     margin-bottom: 3px;
-    font-size: 11px;
 }
 
 .block.block-type-gostream .stream-list li.stream-item .author {
-    color: #4c4c4c;
-    text-decoration: underline;
-}
 
-.block.block-type-gostream .stream-list li.stream-item .author:hover {
-    color: #f00;
 }
 
 .block.block-type-gostream .stream-list li.stream-item .date {

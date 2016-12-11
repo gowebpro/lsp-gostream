@@ -1,0 +1,16 @@
+.block.block-type-gostream .stream-list li.stream-item {
+    margin-bottom: 15px;
+}
+
+.block.block-type-gostream .stream-list li.stream-item p {
+    font-size: 11px;
+}
+
+.block.block-type-gostream .stream-list li.stream-item .author {
+    color: #4c4c4c;
+    text-decoration: underline;
+}
+
+.block.block-type-gostream .stream-list li.stream-item .author:hover {
+    color: #f00;
+}
