@@ -30,10 +30,16 @@ class PluginGostream_HookStream extends Hook
             if (!array_key_exists('blocks', $aRule)) continue;
             foreach ($aRule['blocks'] as $sGroup => $aBlocks) {
                 foreach ((array)$aBlocks as $sBlockName => $aParams) {
+                    $mKeyToUnset = (string)$sReplaceBlock;
+                    if (is_int($sBlockName)) {
+                        $mKeyToUnset = (int)$sBlockName;
+                        $sBlockName = (string)$aParams;
+                        $aParams = array();
+                    }
                     if (strtolower($sBlockName) == $sReplaceBlock) {
                         $aParams['params']['plugin'] = 'gostream';
                         $aBlocksRule[$sName]['blocks'][$sGroup]['goStream'] = $aParams;
-                        unset($aBlocksRule[$sName]['blocks'][$sGroup][$sReplaceBlock]);
+                        unset($aBlocksRule[$sName]['blocks'][$sGroup][$mKeyToUnset]);
                     }
                 }
             }

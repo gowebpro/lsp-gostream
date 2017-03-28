@@ -7,8 +7,8 @@
     <author>
         <lang name="default">Chiffa</lang>
     </author>
-    <homepage>http://goweb.pro/lsp-gostream</homepage>
-    <version>1.0a2</version>
+    <homepage>https://gowebpro.github.io/lsp-gostream</homepage>
+    <version>1.0a4</version>
     <settings>{admin}/gowebpro</settings>
     <requires>
         <livestreet>1.0</livestreet>
