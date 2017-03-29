@@ -8,12 +8,10 @@
         <lang name="default">Chiffa</lang>
     </author>
     <homepage>https://gowebpro.github.io/lsp-gostream</homepage>
-    <version>1.0a4</version>
-    <settings>{admin}/gowebpro</settings>
+    <version>2.0.0</version>
+    <settings>{admin}gostream</settings>
     <requires>
-        <livestreet>1.0</livestreet>
-        <plugins>
-        </plugins>
+        <livestreet>2.0.*</livestreet>
     </requires>
     <description>
         <lang name="default">Stream block</lang>

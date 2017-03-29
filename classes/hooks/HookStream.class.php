@@ -24,7 +24,15 @@ class PluginGostream_HookStream extends Hook
 
     public function InitAction()
     {
-        $sReplaceBlock = 'stream';
+        /**
+         * Подключаем компоненты
+         */
+        $this->Component_Add('gostream:gostream');
+
+        /**
+         * Подменяем блок
+         */
+        $sReplaceBlock = 'activityRecent';
         $aBlocksRule = (array)Config::Get('block');
         foreach ($aBlocksRule as $sName => $aRule) {
             if (!array_key_exists('blocks', $aRule)) continue;
@@ -36,7 +44,7 @@ class PluginGostream_HookStream extends Hook
                         $sBlockName = (string)$aParams;
                         $aParams = array();
                     }
-                    if (strtolower($sBlockName) == $sReplaceBlock) {
+                    if (strtolower($sBlockName) == strtolower($sReplaceBlock)) {
                         $aParams['params']['plugin'] = 'gostream';
                         $aBlocksRule[$sName]['blocks'][$sGroup]['goStream'] = $aParams;
                         unset($aBlocksRule[$sName]['blocks'][$sGroup][$mKeyToUnset]);

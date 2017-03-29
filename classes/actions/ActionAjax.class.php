@@ -28,13 +28,14 @@ class PluginGostream_ActionAjax extends PluginGostream_Inherit_ActionAjax
     {
         $iLimit = Config::Get('plugin.gostream.block_count');
         if ($aEvents = $this->Stream_ReadAll($iLimit)) {
-            $oViewerLocal = $this->Viewer_GetLocalViewer();
-            $oViewerLocal->Assign('aStreamEvents', $aEvents);
-            $sHtml = $oViewerLocal->Fetch(PluginGostream::GetFrontendPath() . 'block.goStream_all.tpl');
-            $this->Viewer_AssignAjax('sText', $sHtml);
+            $oViewer = $this->Viewer_GetLocalViewer();
+            $oViewer->Assign('events', $aEvents, true);
+            $sTextResult = $oViewer->Fetch("component@gostream:gostream.gostream-all");
+            $this->Viewer_AssignAjax('sText', $sTextResult);
         } else {
-            $this->Message_AddErrorSingle($this->Lang_Get('plugin.gostream.no_events'), $this->Lang_Get('attention'));
-            return false;
+            $this->Message_AddErrorSingle($this->Lang_Get('plugin.gostream.block.no_events'),
+                $this->Lang_Get('common.attention'));
+            return;
         }
     }
 
@@ -42,13 +43,14 @@ class PluginGostream_ActionAjax extends PluginGostream_Inherit_ActionAjax
     {
         $iLimit = Config::Get('plugin.gostream.block_count');
         if ($aEvents = $this->Stream_Read($iLimit)) {
-            $oViewerLocal = $this->Viewer_GetLocalViewer();
-            $oViewerLocal->Assign('aStreamEvents', $aEvents);
-            $sHtml = $oViewerLocal->Fetch(PluginGostream::GetFrontendPath() . 'block.goStream_my.tpl');
-            $this->Viewer_AssignAjax('sText', $sHtml);
+            $oViewer = $this->Viewer_GetLocalViewer();
+            $oViewer->Assign('events', $aEvents, true);
+            $sTextResult = $oViewer->Fetch("component@gostream:gostream.gostream-my");
+            $this->Viewer_AssignAjax('sText', $sTextResult);
         } else {
-            $this->Message_AddErrorSingle($this->Lang_Get('plugin.gostream.no_events'), $this->Lang_Get('attention'));
-            return false;
+            $this->Message_AddErrorSingle($this->Lang_Get('plugin.gostream.block.no_events'),
+                $this->Lang_Get('common.attention'));
+            return;
         }
     }
 

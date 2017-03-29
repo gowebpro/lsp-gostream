@@ -20,10 +20,15 @@ class PluginGostream_BlockGoStream extends Block
     {
         $iLimit = Config::Get('plugin.gostream.block_count');
         if ($aEvents = $this->Stream_ReadAll($iLimit)) {
-            $oViewerLocal = $this->Viewer_GetLocalViewer();
-            $oViewerLocal->Assign('aStreamEvents', $aEvents);
-            $sHtml = $oViewerLocal->Fetch(PluginGostream::GetFrontendPath() . 'block.goStream_all.tpl');
-            $this->Viewer_Assign('aStreamAll', $sHtml);
+            $oViewer = $this->Viewer_GetLocalViewer();
+            $oViewer->Assign('events', $aEvents, true);
+            /**
+             * Формируем результат в виде шаблона и возвращаем
+             */
+            $sTextResult = $oViewer->Fetch("component@gostream:gostream.gostream-all");
+            $this->Viewer_Assign('content', $sTextResult, true);
         }
+
+        $this->SetTemplate('component@gostream:gostream.block.gostream');
     }
 }

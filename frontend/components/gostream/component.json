@@ -1,0 +1,16 @@
+{
+    "name": "gostream",
+    "version": "1.0.0",
+    "templates": {
+        "block.gostream": "blocks/block.gostream.tpl",
+        "gostream-all": "blocks/gostream-all.tpl",
+        "gostream-my": "blocks/gostream-my.tpl",
+        "event": "event.tpl"
+    },
+    "scripts": {
+        "gostream": "js/gostream.js"
+    },
+    "styles": {
+        "gostream": "css/gostream.css"
+    }
+}

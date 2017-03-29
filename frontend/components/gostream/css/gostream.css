@@ -1,0 +1,11 @@
+/**
+ * Прямой эфир
+ *
+ */
+
+.ls-block--gostream {
+}
+
+.ls-block--gostream .activity-event-text {
+    display: none;
+}
