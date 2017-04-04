@@ -2,6 +2,10 @@
 
 ***
 
+Beta-Версия для **LiveStreet 2.0** - [download.zip](//github.com/gowebpro/lsp-gostream/archive/2.0.0.zip)
+
+***
+
 ## О проекте
 Плагин заменяет стандартный блок "Прямой эфир" на блок с выводом активности.
 
